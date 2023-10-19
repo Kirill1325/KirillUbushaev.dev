@@ -1,38 +1,243 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Prompt&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* body{
+    width: 100vw;
+} */
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    height: 8vh;
+    background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navRightCategories {
+    display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navRightCategories p {
+    font-size: 1.1em;
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.navRightCategories p:hover {
+    color: rgb(87, 87, 87);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navRight button,
+.navModalContent button {
+    width: 2em;
+    height: 2em;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.w-6.h-6 {
+    border: none;
+    color: black;
+    width: 2em;
+    height: 2em;
+}
+
+.NavModal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    transition: .5s;
+}
+
+.navModalContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navModalContent button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.navModalContent p {
+    font-size: 4em;
+    margin: .5em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    /* padding: 1em; */
+}
+
+.mainContent {
+    padding-top: 17vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.mainTopDescription {
+    display: flex;
+    gap: .5em;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main h1 {
+    font-size: 2.5em;
+    margin-bottom: .5em;
+}
+
+main p {
+    margin-bottom: .5em;
+}
+
+.imgContainer {
+    height: 100%;
+}
+
+.imgContainer img {
+    max-width: 10em;
+    height: 10em;
+    border-radius: 100%;
+}
+
+.techStack {
+    display: flex;
+    align-items: center;
+    gap: .3em;
+}
+
+.divider {
+    background-color: rgb(0, 0, 0);
+    align-self: stretch;
+    width: .05em;
+}
+
+.techStack img {
+    width: 2em;
+    height: auto;
+}
+
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5em;
+    margin: 1em auto;
+    width: 100%;
+}
+
+.portfolio{
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 0 auto;
+}
+
+/* .portfolio h2{
+    color: rgb(33, 96, 255);
+} */
+
+.projectItem {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2em;
+}
+
+.projectImgContainer{
+    width: 60%;
+}
+
+.projectImgContainer img {
+    width: 100%;
+}
+
+.projectDescription{
+    width: 40%;
+}
+
+.projectDescription h2 {
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.projectItem span,
+.links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3em;
+    margin: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+.links {
+    gap: 2em;
+}
+
+.links a{
+    cursor: pointer;
+}
+
+.links img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.w-6.h-6 {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+@media (min-width: 40em) {
+    .navMenu {
+        display: none;
+    }
+
+    .navRightCategories {
+        display: flex;
+        gap: 1em;
+    }
+
+    .imgContainer img {
+        width: 15em;
+        height: auto;
+    }
+
+    .projectItem {
+        flex-direction: row;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+
+
 }
