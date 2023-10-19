@@ -1,13 +1,30 @@
 import React from 'react'
 
 interface NavModalProps {
-    setIsNavModalVisible: React.Dispatch<React.SetStateAction<boolean>>
-
+    setIsNavModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    homeRef: React.RefObject<HTMLDivElement>,
+    portfolioRef: React.RefObject<HTMLDivElement>,
+    contactsRef: React.RefObject<HTMLDivElement>
 }
 
-function NavModal({ setIsNavModalVisible }: NavModalProps) {
+function NavModal({ setIsNavModalVisible, homeRef, portfolioRef, contactsRef }: NavModalProps) {
 
     const handleNavClick = () => {
+        setIsNavModalVisible(false)
+    }
+
+    const handleHomeClick = () => {
+        homeRef.current?.scrollIntoView({ behavior: 'smooth' })
+        setIsNavModalVisible(false)
+    }
+
+    const handlePortfolioClick = () => {
+        portfolioRef.current?.scrollIntoView({ behavior: 'smooth' })
+        setIsNavModalVisible(false)
+    }
+
+    const handleContactsClick = () => {
+        contactsRef.current?.scrollIntoView({ behavior: 'smooth' })
         setIsNavModalVisible(false)
     }
 
@@ -19,8 +36,9 @@ function NavModal({ setIsNavModalVisible }: NavModalProps) {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
-                <p>Home</p>
-                <p>Projects</p>
+                <p onClick={handleHomeClick} >Home</p>
+                <p onClick={handlePortfolioClick} >Projects</p>
+                <p onClick={handleContactsClick} >Contacts</p>
             </div>
         </div>
     )

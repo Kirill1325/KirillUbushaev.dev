@@ -3,13 +3,15 @@ import photo from '../imgs/photo.png'
 import ReactLogo from '../imgs/ReactLogo.svg'
 import tsLogo from '../imgs/typescript.svg'
 
+interface HomeProps {
+    reff: React.RefObject<HTMLDivElement>
+}
 
-
-function Home() {
+function Home({ reff }: HomeProps) {
 
     return (
 
-        <main>
+        <main ref={reff}>
             <div className='mainContent'>
                 <div className='mainTopDescription'>
                     <h1>Frontend React Developer</h1>
