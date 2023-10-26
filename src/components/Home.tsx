@@ -2,6 +2,7 @@ import React from 'react'
 import photo from '../imgs/photo.png'
 import ReactLogo from '../imgs/ReactLogo.svg'
 import tsLogo from '../imgs/typescript.svg'
+import redux from '../imgs/redux.svg'
 
 interface HomeProps {
     reff: React.RefObject<HTMLDivElement>
@@ -21,6 +22,7 @@ function Home({ reff }: HomeProps) {
                         <div className='divider'></div>
                         <img src={ReactLogo} alt='react'></img>
                         <img src={tsLogo} alt='ts'></img>
+                        <img src={redux} alt='redux'></img>
                     </div>
                 </div>
                 <div className='imgContainer'>
