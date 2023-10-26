@@ -15,6 +15,9 @@ function ProjectItem() {
           <b>React</b>
           <div className='divider'></div>
           <b>TypeScript</b>
+          <div className='divider'></div>
+          <b>Redux Toolkit</b>
+          
         </span>
         <span className='links'>
           <a className='git' href='https://github.com/Kirill1325/tsReactShoes'>
